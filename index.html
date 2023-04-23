@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ibank CBG</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+</head>
+<body>
+    <h6 style="text-align: center;" >This is a cloned site for developmental purposes</h6>
+    <div id="app"></div>
+    <script type="text/babel">
+
+        class Top extends React.Component {
+            render() {
+                return(<div>
+                    <img id="logo" src="cbg_logo.png" alt="CBG logo"/>
+                    <hr />
+                    <h2 id="ib">Internet Banking</h2>
+                    <div id="wl">
+                        <h3 id="welcome" >Welcome User</h3>
+                        <h4 id="last" >Last Login : 04/22/2024 23:02:58</h4>
+                        </div>
+                    </div>)
+            }
+        }
+
+        class Main extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {
+                    buttonName: "Account",
+                    accountNumber: "0000123456789",
+                    currency: ["GHS", "NGN", "USD", "EUR", "JPY", "AUD"],
+                    availableBalance: "30,345",
+                    ledgerBalance: "43,524"
+                }
+            }
+
+                    toggleMenu = () => {
+                        const menu = document.querySelector('ul');
+                        menu.classList.toggle('show');
+                        let svg2 = `<svg width="80px" height="80px" viewBox="-11.04 -11.04 46.08 46.08" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1139A8"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path d="M5 5L19 19M5 19L19 5" stroke="#00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>`;
+                        let svg1 = `<svg width="80px" height="80px" viewBox="-4.8 -4.8 33.60 33.60" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1a398d" transform="rotate(0)matrix(-1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.192"></g><g id="SVGRepo_iconCarrier"> <path d="M4 17H20M4 12H20M4 7H20" stroke="#00000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>`;
+                        let svgContainer = document.querySelector('.menu-btn');
+                        let mainButtons = document.querySelector('#main_buttons');
+
+                        if (svgContainer.innerHTML === svg1) { 
+                            svgContainer.innerHTML = svg2;
+                            mainButtons.style.display = 'block';
+                            svgContainer.classList.add('open');
+                        } else if(svgContainer.innerHTML === svg2){
+                            svgContainer.innerHTML = svg1;
+                            mainButtons.style.display = 'none';
+                            svgContainer.classList.remove('open');
+                        }
+                    }
+
+
+
+                    render() {
+                    return(
+                        <div>
+                            <button className="menu-btn" onClick={this.toggleMenu}><svg width="80px" height="80px" viewBox="-4.8 -4.8 33.60 33.60" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1a398d" transform="rotate(0)matrix(-1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.192"></g><g id="SVGRepo_iconCarrier"> <path d="M4 17H20M4 12H20M4 7H20" stroke="#00000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+                            <br />
+                        <div id="main_buttons">
+                            <ul>
+                            <li><button id="mainbtn">Account</button></li>
+                            <li><button id="mainbtn">Card Services</button></li>
+                            <li><button id="mainbtn">Transfer</button></li>
+                            <li><button id="mainbtn">Ghana.Gov</button></li>
+                            <li><button id="mainbtn">Bill Payments</button></li>
+                            <li><button id="mainbtn">Cheque Services</button></li>
+                            <li><button id="mainbtn">Other Services</button></li>
+                            <li><button id="mainbtn">FAQs & Help</button></li>
+                            </ul>
+                        </div>
+                            
+
+                        <div id="btn_details">
+                            <h3 id="btn_name">{this.state.buttonName}</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                    <th id="btn_name">Account number :</th>
+                                    <td>
+                                        <select name="acc_number" id="acc_number">
+                                        <option value="">--select account--</option>
+                                        <option value="">{this.state.accountNumber}</option>
+                                        </select>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <th id="btn_name">Currency :</th>
+                                    <td>
+                                        <select name="currency" id="currency">
+                                        <option value="">{this.state.currency[0]}</option>
+                                        <option value="">{this.state.currency[1]}</option>
+                                        <option value="">{this.state.currency[2]}</option>
+                                        <option value="">{this.state.currency[3]}</option>
+                                        <option value="">{this.state.currency[4]}</option>
+                                        <option value="">{this.state.currency[5]}</option>
+                                        </select>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <th id="btn_name">Ledger balance :</th>
+                                    <td><input type="text" placeholder={this.state.ledgerBalance} disabled></input></td>
+                                    </tr>
+                                    <tr>
+                                    <th id="btn_name">Available balance :</th>
+                                    <td><input type="text" placeholder={this.state.availableBalance} disabled></input></td>
+                                    </tr>
+                                </tbody>
+                                </table>
+
+                        </div>
+                    </div>
+                )
+            }
+        }
+
+
+        class App extends React.Component {
+            render() {
+                return( <div>
+                            <Top />
+                            <Main />
+                        </div>
+                )
+            }
+        }
+
+        const container = document.querySelector("#app");
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+
+    </script>
+
+    <div id="footer" >
+        <a href="https://ibank.cbg.com.gh/personal.jsf#"><br/><button id="dbutton" >Terms & Conditions </button> <br/><br/> <button id="dbutton">Whistle Blower </button> </a>
+        <br />
+        <h2 id="cr" >CBG copyright © 2023</h2>
+    </div>
+    
+</body>
+</html>
