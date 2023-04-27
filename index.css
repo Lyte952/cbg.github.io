@@ -31,6 +31,12 @@ hr {
     margin-right: 10px;
 } 
 
+div#svg-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
 #wl {
     margin-left: 20px;
     margin-right: 10px;
@@ -158,6 +164,12 @@ select, input {
     transform: scale(1.1);
 }
 
+#middle {
+    background-image: url('bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media (max-width: 793px) {
     
     #wl {
@@ -242,11 +254,10 @@ select, input {
       
       .menu-btn svg {
         display: block;
-        height: 24px;
-        margin-left: 10px;
-        margin-right: 10px;
+        height: 35px;
+        margin-right: 30px;
         transition: all 0.3s ease-in-out;
-        width: 24px;
+        width: 35px;
       }
       
       .show {
