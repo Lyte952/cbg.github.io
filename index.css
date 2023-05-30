@@ -86,6 +86,8 @@ ul {
 
 #mainbtn:hover {
     background-color: black;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     color: white;
     z-index: 1;
 }
