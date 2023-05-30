@@ -23,7 +23,7 @@
                     <h2 id="ib">Internet Banking</h2>
                     <div id="wl">
                         <h3 id="welcome" >Welcome User</h3>
-                        <h4 id="last" >Last Login : 04/22/2024 23:02:58</h4>
+                        <h4 id="last" >Last Login : 04/22/2024 at 11:02:43</h4>
                         </div>
                     </div>)
             }
@@ -71,14 +71,86 @@
                             <br />
                         <div id="main_buttons">
                             <ul>
-                            <li><button id="mainbtn">Account</button></li>
-                            <li><button id="mainbtn">Card Services</button></li>
-                            <li><button id="mainbtn">Transfer</button></li>
-                            <li><button id="mainbtn">Ghana.Gov</button></li>
-                            <li><button id="mainbtn">Bill Payments</button></li>
-                            <li><button id="mainbtn">Cheque Services</button></li>
-                            <li><button id="mainbtn">Other Services</button></li>
-                            <li><button id="mainbtn">FAQs & Help</button></li>
+                            <li class="dropdown"><button id="mainbtn">Account</button>
+                                <div class="dropdown-content">
+                                    <a href="#">Balance</a>
+                                    <a href="#">Transactions List</a>
+                                    <a href="#">Monthly Statement</a>
+                                </div>
+                                </li>
+                            <li class="dropdown"><button id="mainbtn">Card Services</button>
+                                <div class="dropdown-content">
+                                    <a href="#">Card Services</a>
+                                    <a href="#">PIN Request</a>
+                                    <a href="#">Stop Card</a>
+                                    <a href="#">Activate Card</a>
+                                </div>
+                                </li>
+                                <li class="dropdown">
+                                    <button id="mainbtn">Transfer</button>
+                                    <div class="dropdown-content">
+                                        <div class="dropdown2">
+                                        <a href="#">Internal</a>
+                                        <div class="dropdown-content2">
+                                            <a href="#">To CBG Account</a>
+                                            <a href="#">Money Voucher</a>
+                                        </div>
+                                        </div>
+                                        <div class="dropdown2">
+                                        <a href="#">External</a>
+                                        <div class="dropdown-content2">
+                                            <a href="#">Instant Pay</a>
+                                            <a href="#">Two Days</a>
+                                            <a href="#">International</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </li>
+                            <li class="dropdown"><button id="mainbtn">Ghana.Gov</button>
+                                <div class="dropdown-content">
+                                    <div class="dropdown2">
+                                        <a href="#">Gov.Gh</a>
+                                        <div class="dropdown-content2">
+                                            <a href="#">Invoices</a>
+                                        </div>
+                                        </div>
+                                        <div class="dropdown2">
+                                        <a href="#">Gov.MDA</a>
+                                        <div class="dropdown-content2">
+                                            <a href="#">GRA Direct Payment</a>
+                                            <a href="#">Document No.Payment</a>
+                                            <a href="#">Customs/Unipass</a>
+                                        </div>
+                                        </div>
+                                        <a href="#">Statement</a>
+                                </div>
+                                </li>
+                            <li class="dropdown"><button id="mainbtn">Bill Payments</button>
+                                <div class="dropdown-content">
+                                    <a href="#">AirTime TopUp</a>
+                                    <a href="#">DSTV/GoTV</a>
+                                    <a href="#">Surfline</a>
+                                    <a href="#">Vodafone</a>
+                                    <a href="#">ECG</a>
+                                    <a href="#">Mobile Money</a>
+                                </div>
+                                </li>
+                            <li class="dropdown"><button id="mainbtn">Cheque Services</button>
+                                <div class="dropdown-content">
+                                    <a href="#">Cheque Services</a>
+                                    <a href="#">Stop Cheque</a>
+                                </div>
+                                </li>
+                            <li class="dropdown"><button id="mainbtn">Other Services</button>
+                                <div class="dropdown-content">
+                                    <a href="#">Standing Order</a>
+                                </div>
+                                </li>
+                            <li class="dropdown"><button id="mainbtn">FAQs & Help</button>
+                                <div class="dropdown-content">
+                                    <a href="#">FAQs</a>
+                                </div>
+                                </li>
                             </ul>
                         </div>
                             
